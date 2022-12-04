@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="icon" href="favicon.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <script src="main.js" defer></script>
+    <title>Tarefa de PC</title>
+</head>
+
+<body>
+    <header>
+        <img src="fatec.png" id="Pfatec"/>
+        <img src="oracle.png" id="Poracle"/>
+        <img src="gov.png" id="Psp"/>
+        <div class="tema">
+            <input type="checkbox" class="checkbox" id="chk">
+            <label class="label" for="chk">
+                <div class="ball"></div>
+            </label>
+            </div>
+            <h1>Cadastro - Palestra Tech</h1>
+    </header>
+    <main>
+        <p>Cadastre-se para a Palestra Oracle dia 30/02/2023</p>
+        <button type="button" class="button blue mobile" id="cadastrarAluno">Cadastrar Aluno</button>
+        <table id="tableStudent" class="records">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Data de Nascimento</th>
+                    <th>Celular</th>
+                    <th>Matricula</th>
+                    <th>Curso</th>
+                    <th>Turno</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="modal" id="modal2">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Excluir Aluno</h2>
+                    <span class="modal-close" id="modalClose2">&#10006;</span>
+                </header>
+                <div id='avisoDelete'>
+                </div>
+                <footer class="modal-footer">
+                    <button id="apagar" class="button red">Apagar</button>
+                    <button id="cancelar2" class="button blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Aluno</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome" required>
+                    <input type="email" id="email" class="modal-field" placeholder="E-mail" required>
+                    <input type="date" id="data" class="modal-field" placeholder="Data de nascimento" required>
+                    <input type="text" id="celular" class="modal-field" placeholder="Celular" required>
+                    <input type="number" id="matricula" class="modal-field" placeholder="Matricula" required>
+                    <select id="curso" class="modal-field">
+                        <option>Curso</option>
+                        <option value="ADS">ADS</option>
+                        <option value="Comex">Comex</option>
+                        <option value="PQ">PQ</option>
+                        <option value="GE">GE</option>
+                        <option value="DSM">DSM</option>
+                    </select>
+                    <select id="turno" class="modal-field">
+                        <option>Turno</option>
+                        <option value="manha">Manhã</option>
+                        <option value="tarde">Tarde</option>
+                        <option value="noite">Noite</option>
+                        <option value="ead">EaD</option>
+                    </select>
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar" class="button blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>Eu <3 Javascript</p>
+            <p>Feito por Ana Cristina e Isaac Matheus</p>
+            <img src="cps.png" id="Pcps"/>
+    </footer>
+</body>
+
+</html>
